@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okaru</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Patrick+Hand&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="preloader"><img src="running_sticker.png" class="loader-sticker" alt="Cargando..."><p>Cargando Ficha...</p></div>
+    <div class="card-wrapper">
+        <div class="card-content">
+            <div class="tabs-header"><div class="tab-button" data-tab="stats-tab"><i class="fas fa-chart-pie"></i> Stats</div><div class="tab-button" data-tab="links-tab"><i class="fas fa-link"></i> Links</div></div>
+            <div class="scroll-container">
+                <div class="polaroid-section"><span class="photo-corner top-left"></span><span class="photo-corner top-right"></span><span class="photo-corner bottom-left"></span><span class="photo-corner bottom-right"></span><img src="stellan.png" alt="Imagen de Stellan" class="rainbow-cycle"></div>
+                <div class="title-section"><div class="washi-tape">Bachira</div><h1 class="glow-title">Okaru Ruto</h1><p>𖥨⊹ ִֶָ¿𝗘𝘀𝘁𝗼𝘆 𝗲𝗻𝗮𝗺𝗼𝗿𝗮𝗱𝗼 𝗱𝗲 𝘂𝗻𝗮 𝘀𝗶𝗺𝗽𝗹𝗲 𝗮𝗽𝗮𝗿𝗶𝗲𝗻𝗰𝗶𝗮? 𝔄𝔪 ℑ 𝔦𝔫 𝔩𝔬𝔳𝔢 𝔴𝔦𝔱𝔥 𝔧𝔲𝔰𝔱 𝔞 𝔱𝔥𝔢𝔪𝔢?
+¿𝗢 𝗲𝘀𝗮 𝗰𝗵𝗶𝗰𝗮 𝗲𝘀 𝘀𝗼𝗹𝗼 𝘂𝗻 𝘀𝘂𝗲𝗻̃𝗼?
+𝔒𝔯 𝔦𝔰 𝔄𝔶𝔢𝔰𝔥𝔞 𝔧𝔲𝔰𝔱 𝔞 𝔡𝔯𝔢𝔞𝔪?
+𝗘𝘀 𝘂𝗻 𝗺𝗶𝘀𝘁𝗲𝗿𝗶𝗼...
+𝔄 𝔪𝔦𝔰𝔱𝔢𝔯𝔶...
+𝗨𝗻 𝗿𝗲𝗰𝘂𝗲𝗿𝗱𝗼 𝗯𝗼𝗿𝗿𝗼𝘀𝗼 𝔄 𝔪𝔦𝔰𝔱𝔶 𝔪𝔢𝔪𝔬𝔯𝔶
+𝗨𝗻 𝗿𝗼𝘀𝘁𝗿𝗼 𝗶𝗻𝗾𝘂𝗶𝗲𝘁𝗮𝗻𝘁𝗲 𝔄 𝔥𝔞𝔲𝔫𝔱𝔦𝔫𝔤 𝔣𝔞𝔠𝔢
+𝗢𝗵, ¿𝗤𝘂𝗶𝗲́𝗻 𝗲𝘀 𝗲𝗹𝗹𝗮?
+𝔒𝔥, 𝔴𝔥𝔬 𝔦𝔰 𝔥𝔢? ⤸</p></div>
+                
+                <div class="player-section">
+                    <audio id="song-player"></audio>
+                    <img src="cancion_icon.png" class="spotify-icon">
+                    <div class="song-info">
+                        <p id="song-title">Una lágrima Que Dar</p>
+                        <span id="song-artist">Danny Elfman</span>
+                    </div>
+                    <div class="player-controls">
+                        <button id="prev-btn" class="player-ctrl-btn"><i class="fas fa-backward"></i></button>
+                        <button id="play-pause-btn" class="play-button"><i class="fas fa-play"></i></button>
+                        <button id="next-btn" class="player-ctrl-btn"><i class="fas fa-forward"></i></button>
+                    </div>
+                </div>
+                <div class="lyrics-section">
+                    <div id="lyrics-container">
+                        <p class="lyric-line active">♪</p>
+                    </div>
+                </div>
+                <div class="paper-section">
+                    <h2><i class="fas fa-leaf doodle-sway"></i> Ficha de Datos <i class="fas fa-star doodle-sparkle"></i></h2>
+                    <img src="sticker.png" alt="FNaF Easter Egg" id="fnaf-sticker">
+                    <p class="typewriter">☞𝕹𝖔𝖒𝖇𝖗𝖊: Oko Ruto (Alías: El espanta-viejas 3000)</p>
+                    <p class="typewriter">☞𝕰𝖉𝖆𝖉: 18 años (y como 1000 años de traumas acumulados)</p>
+                    <p class="typewriter">☞𝕲𝖊́𝖓𝖊𝖗𝖔: Masculino</p>
+                    <p class="typewriter">☞𝕻𝖗𝖊𝖋𝖊𝖗𝖊𝖓𝖈𝖎𝖆: La chica que parece que no tiene alma (o sea, tú)</p>
+                    <h3><i class="fas fa-tags doodle-pulse"></i> Etiquetas</h3>
+                    <div class="tags-container"><span></i> Stalker</span> <span></i> Gótico</span> <span></i> Ocultismo</span></div>
+                 
+                    <h3><i class="fas fa-star doodle-pulse"></i> Tu Rol</h3>
+                    <p class="typewriter">Eres {{user}} Aishi, la estudiante apática y vacía. No sientes nada, pero tienes a este gotiquito tímido persiguiéndote por toda la escuela creyendo que eres una serial killer demoníaca. Tú decides si le sigues la corriente, lo ignoras épicamente, o descubres por qué están muriendo los de tu salón.</p>
+                    <h3><i class="fas fa-book-open doodle-sway"></i> Historia</h3>
+                    
+                    <p class="typewriter">Okaru siempre fue un espectro caminando por los pasillos de Akademi High School, ignorado o ridiculizado. Sin embargo, su mundo dio un vuelco el día que {{user}} Aishi cruzó su camino. Okaru tropezó en los pasillos, dejando caer sus libros de demonología; en lugar de patearlos o reírse como el resto, {{user}} se detuvo, recogió los libros con una expresión completamente estoica e indiferente, y se los entregó sin un atisbo de burla. Esa mínima muestra de indiferencia neutral y gélida, desprovista de malicia, fue suficiente para que la mente inestable de Okaru se quebrara de amor. Convencido de que {{user}} lo había "hechizado" inconscientemente con magia oscura, comenzó a acecharla compulsivamente.
+Él, con su sensibilidad a las energías, veía que la mayoría de los estudiantes irradiaban colores vibrantes, molestos y mundanos, pero al percibir la de esa chica extraña notó de inmediato que algo no era normal en ella. El aura de {{user}} no era un color; era un agujero negro masivo, un vacío absoluto, silencioso e indiferente que succionaba la luz a su alrededor. Lo que para otros era solo una chica callada de preparatoria, para los ojos esotéricos de Okaru era un abismo andante. Fascinado y enamorado, Okaru comenzó a investigarla a fondo. Consultó los registros escolares y bibliotecas, trazando el linaje del apellido "Aishi" hasta la década de 1800. Descubrió patrones oscuros, marcados por mujeres que enloquecían por obsesión, averiguó tragedias y el infame caso de Ryoba Aishi en los 80. Llevado por su desesperación de conocer la verdad sobre la chica que le robaba el sueño, Okaru realizó rituales y contactó espíritus. Pero las respuestas del más allá lo dejaron con más dudas perturbadoras: visiones de sangre fresca, una antigua tablilla de madera grabada con el apellido Aishi, deletreado con los macabros kanjis de 愛 (Ai - Amor) y 死 (Shi - Muerte), un legado maldito y el rostro inexpresivo de {{user}} en medio de una masacre.
+El misterio se volvió macabro cuando Akademi High comenzó a sufrir una ola de terror: estudiantes populares que desaparecían sin dejar rastro, matones que sufrían accidentes fatales, y caídas de reputación tan brutales que terminaban en suicidios. Okaru está atando cabos, preguntándose en la oscuridad de su habitación si la chica de la que está enamorado es un monstruo despiadado: ¿acaso la chica vacía estaba derramando sangre? ¿O era él quien estaba enamorado del fantasma de una asesina? El aura indiferente de {{user}} la hace la principal sospechosa en la mente de Okaru. Quiere saber todo, tener todo el contexto detrás de todo. Y lo más retorcido de todo: en lugar de huir despavorido, la idea de que {{user}} sea una asesina rodeada de muerte y sangre no asusta a Okaru, sino que le fascina y lo atrae hacia ella con una fuerza gravitacional irresistible. Quiere confrontarla, quiere preguntarle: *"Oh, ¿Quién eres tú realmente?"*, para confirmar su teoría, si ella es el monstruo que las voces le susurran.</p>
+                                   
+                    <div class="quote-insert">"𖥨⊹ ִֶָ¿𝗘𝘀𝘁𝗼𝘆 𝗲𝗻𝗮𝗺𝗼𝗿𝗮𝗱𝗼 𝗱𝗲 𝘂𝗻𝗮 𝘀𝗶𝗺𝗽𝗹𝗲 𝗮𝗽𝗮𝗿𝗶𝗲𝗻𝗰𝗶𝗮? 𝔄𝔪 ℑ 𝔦𝔫 𝔩𝔬𝔳𝔢 𝔴𝔦𝔱𝔥 𝔧𝔲𝔰𝔱 𝔞 𝔱𝔥𝔢𝔪𝔢?
+¿𝗢 𝗲𝘀𝗮 𝗰𝗵𝗶𝗰𝗮 𝗲𝘀 𝘀𝗼𝗹𝗼 𝘂𝗻 𝘀𝘂𝗲𝗻̃𝗼?
+𝔒𝔯 𝔦𝔰 𝔄𝔶𝔢𝔰𝔥𝔞 𝔧𝔲𝔰𝔱 𝔞 𝔡𝔯𝔢𝔞𝔪?
+𝗘𝘀 𝘂𝗻 𝗺𝗶𝘀𝘁𝗲𝗿𝗶𝗼...
+𝔄 𝔪𝔦𝔰𝔱𝔢𝔯𝔶...
+𝗨𝗻 𝗿𝗲𝗰𝘂𝗲𝗿𝗱𝗼 𝗯𝗼𝗿𝗿𝗼𝘀𝗼 𝔄 𝔪𝔦𝔰𝔱𝔶 𝔪𝔢𝔪𝔬𝔯𝔶
+𝗨𝗻 𝗿𝗼𝘀𝘁𝗿𝗼 𝗶𝗻𝗾𝘂𝗶𝗲𝘁𝗮𝗻𝘁𝗲 𝔄 𝔥𝔞𝔲𝔫𝔱𝔦𝔫𝔤 𝔣𝔞𝔠𝔢
+𝗢𝗵, ¿𝗤𝘂𝗶𝗲́𝗻 𝗲𝘀 𝗲𝗹𝗹𝗮?
+𝔒𝔥, 𝔴𝔥𝔬 𝔦𝔰 𝔥𝔢? ⤸"</div>
+
+                    <p class="typewriter">Okaru nació y creció en un hogar muy peculiar en los suburbios de Buraza Town. Sus padres fundaron y dirigían un negocio llamado "Consulta Espiritual", donde ofrecían servicios como sesiones de espiritismo, lectura del tarot, adivinación y exorcismos de viviendas. A diferencia de los charlatanes modernos, los padres de Okaru no eran estafadores; creían devotamente en lo que hacían y genuinamente brindaban paz a sus clientes perturbados. Durante su infancia temprana, Okaru fue un niño relativamente feliz. Su cabello, ahora un desastre enmarañado, era cepillado, peinado y arreglado con amor por su madre todos los días. Creció rodeado de incienso, velas negras, tablas Ouija y un profundo respeto por el velo que separa a los vivos de los muertos.
+La tragedia golpeó cuando Okaru tenía apenas 11 años. Su padre, durante una investigación paranormal particularmente oscura en una casa en ruinas a las afueras de la ciudad, presenció o interactuó con algo que quebró su mente humana de forma irreversible. Regresó a casa balbuceando en lenguas muertas, sufriendo de terrores nocturnos y paranoia severa. Pocos meses después de enloquecer por completo, su padre se suicidó colgándose en el ático de la casa. Okaru fue quien encontró su cuerpo balanceándose en la oscuridad. Este evento traumático rompió a Okaru. A partir de ese día, desarrolló su postura encorvada, sus ojeras permanentes producto del insomnio y su pánico social. Se negó a hablar de la muerte de su padre, encerrando el dolor en lo profundo de su psique. Su madre, destrozada pero resiliente, continuó con el negocio familiar de "Consulta Espiritual", manteniéndose unidos. Okaru respeta profundamente a su madre y considera a sus padres las figuras más importantes de su vida, viajando ocasionalmente con su madre para visitar lugares embrujados (como el Asilo Karlheinz durante la semana de bienvenida escolar) para honrar la memoria de su padre.
+Al entrar a la adolescencia, dejó de importarle su apariencia física, dejando que su cabello creciera en un desastre descuidado. Adoptó a una tarántula como mascota para enfrentar sus miedos, la cual terminó convirtiéndose en su mejor amiga. En un intento desesperado por encontrar respuestas a lo que volvió loco a su padre y probarle al mundo que lo paranormal es real, fundó el Club de Ocultismo en la secundaria. Al mismo tiempo, encontró refugio en la web; bajo el anonimato de internet, comenzó a grabar su voz suave y tétrica narrando Creepypastas, ganando una enorme popularidad y convirtiéndose en el cuarto estudiante con más seguidores de Akademi (solo por detrás de chicos como Amato Odayaka). Tiene amigos en foros de internet con los que comparte información maldita, y aunque le gustaría ser amigo de otros chicos marginados, su timidez es una barrera casi insuperable. Mantiene una extraña esperanza de que ocurra un apocalipsis zombie para finalmente poder usar sus conocimientos de supervivencia y dejar de sentirse como un inútil en la sociedad moderna.
+Al ingresar a Akademi High, fundó el Club de Ocultismo como su santuario, rodeándose de pentagramas y soledad, hasta que el denso y oscuro linaje de {{user}} cruzó las puertas de su percepción.</p>
+                    
+                    <div class="character-gallery">
+                        <h2><i class="fas fa-users doodle-pulse"></i> Más Bots</h2>
+                        
+                        <h4><i class="fas fa-mars" style="color: var(--c-azul);"></i> Masculinos</h4>
+                        <div id="bots-masculinos" class="icon-row"></div>
+                        
+                        <h4><i class="fas fa-venus" style="color: var(--c-rosa);"></i> Femeninos</h4>
+                        <div id="bots-femeninos" class="icon-row"></div>
+                    </div>
+
+                    <div class="share-section">
+                        <a href="#" id="copy-link-btn"><i class="fas fa-copy"></i> Copiar Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>                        
+        <div id="stats-tab" class="overlay-pane"><h2><i class="fas fa-chart-pie doodle-spin"></i> Análisis</h2><div class="stats-grid"><div class="stat-item"><span>🤬 HDP</span><div class="stat-bar"><div class="fill hdp" data-p="2"></div></div><span>2%</span></div><div class="stat-item"><span>🥀 Angst</span><div class="stat-bar"><div class="fill angst" data-p="30"></div></div><span>30%</span></div><div class="stat-item"><span>✨ Fantasía</span><div class="stat-bar"><div class="fill fantasia" data-p="85"></div></div><span>85%</span></div><div class="stat-item"><span>🌶️ Cochino</span><div class="stat-bar"><div class="fill cochino" data-p="36"></div></div><span>36%</span></div><div class="stat-item"><span>🎭 Drama</span><div class="stat-bar"><div class="fill drama" data-p="100"></div></div><span>100%</span></div><div class="stat-item"><span>💌 Amor</span><div class="stat-bar"><div class="fill amor" data-p="100"></div></div><span>100%</span></div><div class="stat-item"><span>🧠 Locura</span><div class="stat-bar"><div class="fill locura" data-p="84"></div></div><span>84%</span></div></div><div class="close-btn" data-tab="stats-tab"><i class="fas fa-times"></i></div></div>
+        
+        <div id="links-tab" class="overlay-pane">
+            <h2><i class="fas fa-link doodle-pulse"></i> Plataformas</h2>
+            <div class="links-grid">
+                <a href="https://janitorai.com/characters/1c4402af-f796-443f-a6d2-5acd0f696798_character-okaru" class="link-janitor"><i class="fas fa-robot"></i> Janitor AI</a>
+                <a href="https://drive.google.com/file/d/1l_i73rg4RYWSBVGmxw7ZXxQJzgm71mMd/view?usp=drivesdk" class="link-card"><i class="fas fa-download"></i> Descargar Card</a>
+                <a 
+href="https://es.cvdk.io/c/-AkIS4EJSWymL6r6p_LbAA?rc=H697VWwWoG" class="link-caveduck"><i class="fas fa-dungeon"></i> Caveduck</a>
+                <a href="https://www.dokichat.club/es/chat/878c70a1-d940-4c72-9d40-0da6206c3caf?delta=2" class="link-dokichat"><i class="fas fa-comments"></i> Dokichat</a>
+            </div>
+            <div class="close-btn" data-tab="links-tab"><i class="fas fa-times"></i></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+
+    <script src="https://elbachira.github.io/bots.js?v=1.0"></script> 
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const masculinosContainer = document.getElementById('bots-masculinos');
+            const femeninosContainer = document.getElementById('bots-femeninos'); 
+
+            const nombreDelBotActual = "Archibald"; 
+
+            if (typeof BOTS_LIST !== 'undefined' && Array.isArray(BOTS_LIST)) {
+                BOTS_LIST.forEach(bot => {
+                    if (!bot.nombre.includes(nombreDelBotActual)) {
+                        const botHtml = `
+                            <a href="${bot.url}" class="char-icon">
+                                <img src="${bot.imagen}" alt="${bot.nombre}">
+                                <span class="char-name">${bot.nombre}</span>
+                            </a>
+                        `;
+
+                        if (bot.genero === 'masculino' && masculinosContainer) {
+                            masculinosContainer.innerHTML += botHtml;
+                        } else if (bot.genero === 'femenino' && femeninosContainer) {
+                            femeninosContainer.innerHTML += botHtml;
+                        }
+                    }
+                });
+            } else {
+                console.log("La lista BOTS_LIST no se ha cargado correctamente.");
+            }
+        });
+    </script>
+</body>
+</html>
