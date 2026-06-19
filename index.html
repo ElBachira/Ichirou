@@ -115,30 +115,41 @@ href="https://caveduck.io/character-info/10600a83-693b-42de-9b60-e1fffb6bb9ea" c
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const masculinosContainer = document.getElementById('bots-masculinos');
-            const femeninosContainer = document.getElementById('bots-femeninos'); 
+        const masculinosContainer = document.getElementById('bots-masculinos');
+        const femeninosContainer = document.getElementById('bots-femeninos'); 
 
-            const nombreDelBotActual = "Archibald"; 
+        const nombreDelBotActual = "Archibald"; 
 
-            if (typeof BOTS_LIST !== 'undefined' && Array.isArray(BOTS_LIST)) {
-                BOTS_LIST.forEach(bot => {
-                    if (!bot.nombre.includes(nombreDelBotActual)) {
-                        const botHtml = `
-                            <a href="${bot.url}" class="char-icon">
-                                <img src="${bot.imagen}" alt="${bot.nombre}">
-                                <span class="char-name">${bot.nombre}</span>
-                            </a>
-                        `;
+        if (typeof BOTS_LIST !== 'undefined' && Array.isArray(BOTS_LIST)) {
+            // Variables para almacenar el HTML temporalmente
+            let htmlMasculinos = '';
+            let htmlFemeninos = '';
 
-                        if (bot.genero === 'masculino' && masculinosContainer) {
-                            masculinosContainer.innerHTML += botHtml;
-                        } else if (bot.genero === 'femenino' && femeninosContainer) {
-                            femeninosContainer.innerHTML += botHtml;
-                        }
+            BOTS_LIST.forEach(bot => {
+                if (!bot.nombre.includes(nombreDelBotActual)) {
+                    // Se agregó loading="lazy" y decoding="async"
+                    const botHtml = `
+                        <a href="${bot.url}" class="char-icon">
+                            <img src="${bot.imagen}" alt="${bot.nombre}" loading="lazy" decoding="async">
+                            <span class="char-name">${bot.nombre}</span>
+                        </a>
+                    `;
+
+                    // Sumamos el texto en lugar de inyectarlo inmediatamente al DOM
+                    if (bot.genero === 'masculino') {
+                        htmlMasculinos += botHtml;
+                    } else if (bot.genero === 'femenino') {
+                        htmlFemeninos += botHtml;
                     }
-                });
-            } else {
-                console.log("La lista BOTS_LIST no se ha cargado correctamente.");
+                }
+            });
+
+            // Inyectamos todo de golpe al final (una sola actualización del DOM)
+            if (masculinosContainer) masculinosContainer.innerHTML = htmlMasculinos;
+            if (femeninosContainer) femeninosContainer.innerHTML = htmlFemeninos;
+            
+        } else {
+            console.log("La lista BOTS_LIST no se ha cargado correctamente.");
             }
         });
     </script>
